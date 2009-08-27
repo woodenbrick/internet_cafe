@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
+<!--Generated with glade3 3.4.5 on Wed Aug 26 16:39:11 2009 -->
+<glade-interface>
+  <widget class="GtkWindow" id="main_window">
+    <property name="width_request">100</property>
+    <property name="height_request">50</property>
+    <property name="visible">True</property>
+    <property name="resizable">False</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="skip_pager_hint">True</property>
+    <property name="decorated">False</property>
+    <property name="deletable">False</property>
+    <child>
+      <widget class="GtkVBox" id="vbox2">
+        <property name="visible">True</property>
+        <child>
+          <widget class="GtkLabel" id="">
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">Quirky McKies</property>
+          </widget>
+        </child>
+        <child>
+          <widget class="GtkHBox" id="hbox1">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkLabel" id="money">
+                <property name="visible">True</property>
+                <signal name="button_press_event" handler="open_admin"/>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkEventBox" id="eventbox1">
+                <property name="visible">True</property>
+                <property name="visible_window">False</property>
+                <signal name="button_press_event" handler="open_admin"/>
+                <child>
+                  <widget class="GtkLabel" id="timer">
+                    <property name="visible">True</property>
+                    <signal name="button_press_event" handler="open_admin"/>
+                  </widget>
+                </child>
+              </widget>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="GtkWindow" id="admin">
+    <property name="window_position">GTK_WIN_POS_CENTER</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="skip_pager_hint">True</property>
+    <property name="decorated">False</property>
+    <property name="deletable">False</property>
+    <signal name="destroy" handler="close_admin"/>
+    <child>
+      <widget class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <child>
+          <widget class="GtkLabel" id="label1">
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">Admin</property>
+          </widget>
+        </child>
+        <child>
+          <widget class="GtkEntry" id="password">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="has_focus">True</property>
+            <property name="is_focus">True</property>
+            <property name="visibility">False</property>
+            <signal name="changed" handler="on_password_insert"/>
+          </widget>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="reset">
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="label" translatable="yes">Reset Timer</property>
+            <property name="use_stock">True</property>
+            <property name="response_id">0</property>
+            <signal name="clicked" handler="on_reset_clicked"/>
+          </widget>
+          <packing>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="quit">
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="label" translatable="yes">gtk-quit</property>
+            <property name="use_stock">True</property>
+            <property name="response_id">0</property>
+            <signal name="clicked" handler="on_quit_clicked"/>
+          </widget>
+          <packing>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="button1">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="label" translatable="yes">gtk-cancel</property>
+            <property name="use_stock">True</property>
+            <property name="response_id">0</property>
+            <signal name="clicked" handler="on_cancel_clicked"/>
+          </widget>
+          <packing>
+            <property name="position">4</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>
